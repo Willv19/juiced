@@ -64,24 +64,20 @@ main(int argc, char *argv[])
 			fscanf(percfile, "%i", &perc);
 			fclose(percfile);
 
-			if (perc <= warning && notify_init("juiced")) {
-				NotifyNotification *notification = notify_notification_new("Notice", "Battery is low.", NULL);
-				notify_notification_set_urgency(notification, NOTIFY_URGENCY_NORMAL);
-				notify_notification_show(notification, NULL);
-				g_object_unref(notification);
-				notify_uninit();
-			}
-
-			if (perc <= critical && notify_init("juiced")) {
+			if (perc <= danger) {
+				system(dangercmd);
+			} else if (perc <= critical && notify_init("juiced")) {
 				NotifyNotification *notification = notify_notification_new("Warning", "Battery is critically low.", NULL);
 				notify_notification_set_urgency(notification, NOTIFY_URGENCY_NORMAL);
 				notify_notification_show(notification, NULL);
 				g_object_unref(notification);
 				notify_uninit();
-			}
-
-			if (perc <= danger) {
-				system(dangercmd);
+			} else if (perc <= warning && notify_init("juiced")) {
+				NotifyNotification *notification = notify_notification_new("Notice", "Battery is low.", NULL);
+				notify_notification_set_urgency(notification, NOTIFY_URGENCY_NORMAL);
+				notify_notification_show(notification, NULL);
+				g_object_unref(notification);
+				notify_uninit();
 			}
 		}
 
