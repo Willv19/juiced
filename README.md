@@ -1,4 +1,4 @@
-# slstatus
+# juiced
 
 **juiced** is a suckless and lightweight battery daemon written in C. It notifies the user via libnotify about low battery. It is meant for minimal window managers.
 
