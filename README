@@ -1,0 +1,36 @@
+juiced - juice daemon
+=====================
+juiced is a suckless battery daemon which notifies the user via libnotify about low battery. It is meant to be used with minimal window managers.
+
+
+Features
+--------
+Two customizable warnings via libnotify on two different configurable battery
+levels.
+
+
+Requirements
+------------
+In order to build juiced you need the libnotify library.
+
+
+Installation
+------------
+Edit config.mk to match your local setup (juiced is installed into the
+/usr/local namespace by default).
+
+Afterwards enter the following command to build and install juiced (if necessary
+as root):
+
+    make clean install
+
+
+Running juiced
+--------------
+See the man page for details.
+
+
+Configuration
+-------------
+juiced can be customized by creating a custom config.h and (re)compiling the
+source code. This keeps it fast, secure and simple.
