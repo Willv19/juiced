@@ -1,6 +1,7 @@
 juiced - juice daemon
 =====================
-juiced is a suckless battery daemon which notifies the user via libnotify about low battery. It is meant to be used with minimal window managers.
+juiced is a suckless battery daemon which notifies the user via libnotify about
+low battery. It is meant to be used with minimal window managers.
 
 
 Features
