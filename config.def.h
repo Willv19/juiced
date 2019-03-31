@@ -12,4 +12,4 @@ static const signed int critical = 5;
 static const signed int danger = 2;
 
 /* what command to run if battery is under "danger" value */
-static const char dangercmd[] = "sudo zzz";
+static const char dangercmd[] = "exit 0";
