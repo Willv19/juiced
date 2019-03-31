@@ -5,7 +5,7 @@ pkgdesc='A lightweight battery daemon.'
 arch=('i686' 'x86_64')
 license=('MIT')
 depends=('libnotify')
-url="http://st.suckless.org"
+url="https://github.com/drkhsh/juiced"
 source=(arg.h concat.h strlcat.h strlcpy.h config.def.h config.mk juiced.1 juiced.c LICENSE Makefile README)
 sha256sums=(SKIP SKIP SKIP SKIP SKIP SKIP SKIP SKIP SKIP SKIP SKIP)
 
