@@ -1,5 +1,9 @@
+# Compiled outputs
 juiced
 juiced.o
 config.h
 
-.vscode/ipch
+# Outputs of makepkg
+src/
+pkg/
+juiced-*.pkg.tar.xz
