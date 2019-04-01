@@ -31,7 +31,7 @@ ${NAME}: ${OBJ}
 
 clean:
 	@echo cleaning
-	@rm -f ${NAME} ${OBJ} ${NAME}-${VERSION}.tar.gz
+	@rm -f config.h ${NAME} ${OBJ} ${NAME}-${VERSION}.tar.gz
 
 dist: clean
 	@echo creating dist tarball
