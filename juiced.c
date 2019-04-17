@@ -63,7 +63,8 @@ int main(int argc, char *argv[]) {
             fscanf(statefile, "%12s", state);
             fclose(statefile);
 
-            if (strcmp(state, "Discharging") == 0) {
+            if (strcmp(state, "Discharging") == 0 ||
+                strcmp(state, "Unknown") == 0) {
                 ccat(3, "/sys/class/power_supply/", batteries[i], "/capacity");
                 percfile = fopen(concat, "r");
                 if (percfile == NULL) {
